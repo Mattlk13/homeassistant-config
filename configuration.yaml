@@ -17,6 +17,17 @@ history:
 logbook:
 sun:
 
+############
+##Includes##
+############
+
+sensor: !include sensors.yaml
+device_tracker: !include device_trackers.yaml
+#binary_sensor: !include binary_sensors.yaml
+notify: !include notifiers.yaml
+input_select: !include input_select.yaml
+media_player: !include media_player.yaml
+
 ##########
 ##Setups##
 ##########

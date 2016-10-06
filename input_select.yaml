@@ -1,0 +1,14 @@
+tom_status:
+  name: Tom Status
+  options:
+   - driving
+   - standby
+   - sleeping
+  initial: standby
+
+company:
+  name: "Company"
+  options:
+   - "enabled"
+   - "disabled"
+  initial: "disabled"
