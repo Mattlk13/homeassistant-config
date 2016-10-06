@@ -45,3 +45,7 @@ joaoapps_join:
   - name: 'android'
     device_id: group.android
     api_key: !secret join_api
+
+lametric:
+  host: 192.168.1.171
+  api_key: !secret lam_key
