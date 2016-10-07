@@ -35,12 +35,12 @@ media_player: !include media_player.yaml
 http:
   api_password: !secret http_password
 
-#mqtt:
-#  broker: 127.0.0.1
-#  port: 1883
-#  client_id: home-assistant-1
-#  username: pi
-#  password: raspberry
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  client_id: home-assistant-1
+  username: pi
+  password: !secret mqtt_passwd
 
 nest:
   username: !secret email
