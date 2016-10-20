@@ -1,0 +1,58 @@
+homeassistant:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  unit_system: imperial
+  time_zone: America/Detroit
+
+###########
+##Enables##
+###########
+
+frontend:
+discovery:
+conversation:
+history:
+logbook:
+sun:
+
+############
+##Includes##
+############
+
+sensor: !include sensors.yaml
+device_tracker: !include device_trackers.yaml
+#binary_sensor: !include binary_sensors.yaml
+notify: !include notifiers.yaml
+input_select: !include input_select.yaml
+media_player: !include media_player.yaml
+
+##########
+##Setups##
+##########
+
+http:
+  api_password: !secret http_password
+
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  client_id: home-assistant-1
+  username: pi
+  password: !secret mqtt_passwd
+
+nest:
+  username: !secret email
+  password: !secret nest_psswd
+
+climate:
+  platform: nest
+
+light:
+  platform: lifx
+
+joaoapps_join:
+  - name: 'android'
+    device_id: group.android
+    api_key: !secret join_api
