@@ -1,0 +1,15 @@
+programmatic access to the status obtained from the apcupsd daemon.
+Home-page: https://github.com/flyte/apcaccess
+Author: Ellis Percival
+Author-email: apcaccess@failcode.co.uk
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Communications
+Classifier: Topic :: Home Automation
+Classifier: Topic :: System :: Networking
