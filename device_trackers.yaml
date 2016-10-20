@@ -1,0 +1,8 @@
+- platform: asuswrt
+  host: 192.168.1.1
+  protocol: telnet
+  username: !secret asus_user
+  password: !secret asus_pass
+
+- platform: owntracks
+  max_gps_accuracy: 200

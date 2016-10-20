@@ -1,0 +1,7 @@
+- platform: joaoapps_join
+  device_id: group.android
+  name: 6p
+  api_key: !secret join_api
+- platform: html5
+  gcm_api_key: !secret gcm_api_key
+  gcm_sender_id: !secret gcm_sender_id

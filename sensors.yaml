@@ -1,0 +1,48 @@
+- platform: google_travel_time
+  name: Home to Christen's
+  api_key: !secret google_travel_key
+  origin: !secret home_addr
+  destination: !secret chri_addr
+- platform: google_travel_time
+  name: Time to Home
+  api_key: !secret google_travel_key
+  origin: device_tracker.pi_angler
+  destination: !secret home_addr
+- platform: google_travel_time
+  name: Time to Christen's
+  api_key: !secret google_travel_key
+  origin: device_tracker.pi_angler
+  destination: !secret chri_addr
+- platform: nest
+  monitored_conditions:
+   - 'temperature'
+   - 'target'
+   - 'humidity'
+   - 'mode'
+   - 'battery_level'
+   - 'co_status'
+   - 'smoke_status'
+- platform: wunderground
+  api_key: !secret wunder_key
+  pws_id: KMIBERKL6
+  monitored_conditions:
+    - weather
+    - temp_f
+    - feelslike_f
+    - heat_index_f
+    - dewpoint_f
+    - wind_mph
+    - UV
+    - pressure_in
+    - wind_dir
+    - relative_humidity
+    - visibility_mi
+    - precip_today_in
+- platform: cpuspeed
+  name: CPU
+- platform: systemmonitor
+  resources:
+  - type: disk_use_percent
+    arg: /home
+  - type: memory_free
+  - type: processor_use
